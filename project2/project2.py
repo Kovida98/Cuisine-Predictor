@@ -15,8 +15,6 @@ def main(input):
 
     predicted_cuisine,score= cuisine.knnmodel(X_train, X_test, y_train, y_test, ingredientsvector_data, inputvector_data)
 
-#    result= project2.topNcuisines(inputvector_data,ingredientsvector_data,id,N)
-
     return inputvector_data,ingredientsvector_data,id,predicted_cuisine,score
 
 
