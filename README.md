@@ -27,6 +27,7 @@ Author Email: kovida.mothukuri-1@ou.edu
 ## TREE STRUCTURE:
 ```
 ├── COLLABORATORS
+├── LICENSE
 ├── Pipfile
 ├── README.md
 ├── docs
