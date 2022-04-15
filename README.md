@@ -132,6 +132,10 @@ So that there will be no calling of those functions so many times.
    This function tests the `topNcuisines()` function which returns
    data frame named `result`.I wrote an assert statement to check whether the
    number of rows in `result` are equal to N.
+8. **test_output_json():**
+   This function tests the `output_json()` function which returns
+   result_json .I wrote an assert statement to check whether the
+   `result_json` is not none.
 
 ## COMMANDS TO RUN:
 Here to run the file we have to use below command:
@@ -143,6 +147,10 @@ Here to run the file we have to use below command:
 To run test cases we can use any one of the following commands
 
 `pipenv run python -m pytest`
+
+**Expected Output:**
+
+`{'cuisine': 'japanese', 'score': 0.5, 'Closest': '[{"id":26401,"score":0.3333333333},{"id":8882,"score":0.3333333333},{"id":28079,"score":0.2886751346},{"id":45820,"score":0.2886751346},{"id":30371,"score":0.2886751346}]'}`
 
 ## ASSUMPTIONS AND BUGS:
 To run the code using command, You have to give ingredients flag first and

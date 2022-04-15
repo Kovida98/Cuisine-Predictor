@@ -66,10 +66,8 @@ def countvectorizer(list):
     #print(vector)
     return vector
 
-########################################
 
 def traindata(vector,cuisine_type):
-
 
     ingredientsvector_data=vector[0:len(vector)-1]
     #print(ingredientsvector_data.shape)
