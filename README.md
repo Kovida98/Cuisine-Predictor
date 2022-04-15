@@ -25,14 +25,29 @@ Author Email: kovida.mothukuri-1@ou.edu
 
 
 ## TREE STRUCTURE:
-
+```
+├── COLLABORATORS
+├── Pipfile
+├── README.md
+├── docs
+├── project2
+│      ├── cuisine.py
+│      ├── project2.py
+│      └── yummly.json
+├── requirements.txt
+├── setup.cfg
+├── setup.py
+├── tests
+│      ├── test_all.py
+│      └── yummly.json
+└── yummly.json
+```
 ## PACKAGES USED:
 1. json
-2. os
-3. numpy
-4. pandas
-5. nltk
-6. sklearn
+2. numpy
+3. pandas
+4. nltk
+5. sklearn
 
 ## FUNCTIONS:
 I made a folder called project2 with two files titled `project2.py` and
