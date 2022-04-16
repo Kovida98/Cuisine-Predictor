@@ -93,7 +93,7 @@ def knnmodel(X_train,X_test,y_train,y_test,ingredientsvector_data,inputvector_da
     #print(metrics.accuracy_score(y_test,y_pred))
     score1 = model1.predict_proba(inputvector_data)
     score=max(score1[0])
-    print(score)
+    #print(score)
     return test,score
 
 def topNcuisines(inputvector_data,ingredientsvector_data,id,N):
