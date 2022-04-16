@@ -1,3 +1,4 @@
+import ast
 import json
 import numpy as np
 import pandas as pd
@@ -11,7 +12,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-
+import warnings
+warnings.filterwarnings("ignore")
 id=[]
 cuisine_type=[]
 ingredients_list=[]
@@ -87,10 +89,11 @@ def knnmodel(X_train,X_test,y_train,y_test,ingredientsvector_data,inputvector_da
     #print(y_pred)
     test=model1.predict(inputvector_data)
     #print(test)
-    score=metrics.accuracy_score(y_test, y_pred)
+    #score1=metrics.accuracy_score(y_test, y_pred)
     #print(metrics.accuracy_score(y_test,y_pred))
-    #predicted_cuisine = knn.predict_proba(inputvector_data)[0]
-    #print(predicted_cuisine)
+    score1 = model1.predict_proba(inputvector_data)
+    score=max(score1[0])
+    print(score)
     return test,score
 
 def topNcuisines(inputvector_data,ingredientsvector_data,id,N):
@@ -111,14 +114,21 @@ def topNcuisines(inputvector_data,ingredientsvector_data,id,N):
 
 def output_json(res,test,score):
     y=[]
-    out= res.to_json(orient = 'records')
-    #print(out)
+    out= res.to_json(orient = 'table')
+    parsed = json.loads(out)
+    closest_json=json.dumps(parsed, indent=4)
+    di=ast.literal_eval(closest_json)
+    del di["schema"]
+    for i in di["data"]:
+        del i["index"]
+
+    #print(di)
     result_json={}
     result_json["cuisine"]=test[0]
     result_json["score"]=round(score,2)
-    result_json["Closest"]=out
+    result_json["Closest"]=di["data"]
     #print(result_dict)
-
+    output_result=json.dumps(result_json, indent=3)
     #result_dict["Closest"]=out
-    print(result_json)
+    print(output_result)
     return result_json

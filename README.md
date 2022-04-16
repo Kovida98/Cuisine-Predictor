@@ -156,9 +156,7 @@ So that there will be no calling of those functions so many times.
 ## COMMANDS TO RUN:
 Here to run the file we have to use below command:
 
-`pipenv run python project2.py 
---ingredient paprika --ingredient banana --ingredient "rice Krispies" 
---N 5`
+`pipenv run python project2.py --N 5 --ingredient "romaine lettuce" --ingredient "black olives" --ingredient "grape tomatoes" --ingredient garlic --ingredient pepper --ingredient "purple onion" --ingredient seasoning --ingredient "garbanzo beans"`
 
 To run test cases we can use any one of the following commands
 
@@ -166,13 +164,36 @@ To run test cases we can use any one of the following commands
 
 **Expected Output:**
 
-`{'cuisine': 'japanese', 'score': 0.5, 'Closest': '[{"id":26401,"score":0.3333333333},{"id":8882,"score":0.3333333333},{"id":28079,"score":0.2886751346},{"id":45820,"score":0.2886751346},{"id":30371,"score":0.2886751346}]'}`
+```
+{
+   "cuisine": "italian",
+   "score": 0.6,
+   "Closest": [
+      {
+         "id": 10259,
+         "score": 0.9428090416
+      },
+      {
+         "id": 9881,
+         "score": 0.4714045208
+      },
+      {
+         "id": 38994,
+         "score": 0.4264014327
+      },
+      {
+         "id": 3049,
+         "score": 0.4082482905
+      },
+      {
+         "id": 48984,
+         "score": 0.4008918629
+      }
+   ]
+}
 
-## ASSUMPTIONS AND BUGS:
-To run the code using command, You have to give ingredients flag first and
-N flag next. My code will not run, if you give N flag first and ingredients flag next. 
-While running the code, i am getting some warnings related to deprecated issues,
-please ignore such warnings.
+```
+I have changed the instance RAM size to 4 GB.
 ## DIRECTIONS TO INSTALL:
 
 You can create folders and files using mkdir and touch commands.
@@ -186,16 +207,19 @@ required packages.  you need to install pytest using this command `pipenv instal
 run the unittests using `pipenv run python -m pytest`. 
 
 you can run the code using
-`pipenv run python project2.py 
---ingredient paprika --ingredient banana --ingredient "rice Krispies" 
---N 5`.
+`pipenv run python project2.py --N 5 --ingredient "romaine lettuce" --ingredient "black olives" --ingredient "grape tomatoes" --ingredient garlic --ingredient pepper --ingredient "purple onion" --ingredient seasoning --ingredient "garbanzo beans"`.
 
 ## EXTERNAL LINKS USED:
 
 [https://www.geeksforgeeks.org/read-json-file-using-python/](https://www.geeksforgeeks.org/read-json-file-using-python/)
+
 [https://riptutorial.com/nltk/example/27393/porter-stemmer](https://riptutorial.com/nltk/example/27393/porter-stemmer)
+
 [https://investigate.ai/text-analysis/counting-words-with-scikit-learns-countvectorizer/](https://investigate.ai/text-analysis/counting-words-with-scikit-learns-countvectorizer/)
+
 [https://data-flair.training/blogs/machine-learning-algorithms-in-python/](https://data-flair.training/blogs/machine-learning-algorithms-in-python/)
+
 [https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_knn_algorithm_finding_nearest_neighbors.htm](https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_knn_algorithm_finding_nearest_neighbors.htm)
+
 [https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_json.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_json.html)
 
