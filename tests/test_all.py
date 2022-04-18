@@ -1,5 +1,5 @@
 import pytest
-from project2 import cuisine
+import cuisine
 input=['paprika', 'banana','rice krispies','plain flour', 'ground pepper']
 N=3
 id, cuisine_types, ingredients =cuisine.readdata('yummly.json')

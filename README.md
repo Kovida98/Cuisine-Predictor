@@ -31,10 +31,8 @@ Author Email: kovida.mothukuri-1@ou.edu
 ├── Pipfile
 ├── README.md
 ├── docs
-├── project2
-│      ├── cuisine.py
-│      ├── project2.py
-│      └── yummly.json
+├── cuisine.py
+├── project2.py
 ├── requirements.txt
 ├── setup.cfg
 ├── setup.py
@@ -51,8 +49,8 @@ Author Email: kovida.mothukuri-1@ou.edu
 5. sklearn
 
 ## FUNCTIONS:
-I made a folder called project2 with two files titled `project2.py` and
-`cuisine.py` in it.
+I made a file titled `project2.py` and
+`cuisine.py`.
 I've written code in the `cuisine.py` file. I called
 all these functions which wrote in `cuisine.py` in `project2.py` file.
 
